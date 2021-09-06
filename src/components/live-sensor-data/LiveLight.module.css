@@ -1,0 +1,35 @@
+.lightContainer {
+  display: flex;
+  margin-bottom: 5px;
+}
+.lightIcon {
+  width: 72px;
+  padding-right: 5px;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.data {
+  line-height: 85%;
+  height: 85%;
+}
+
+@media only screen and (max-width: 550px) {
+  .lightContainer {
+    flex-basis: 90%;
+    position: relative;
+    margin-top: 15px;
+  }
+  .lightIcon {
+    width: 55px;
+    height: auto;
+    margin-left: 10px;
+  }
+}

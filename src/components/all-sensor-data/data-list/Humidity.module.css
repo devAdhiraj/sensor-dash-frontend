@@ -1,0 +1,24 @@
+.humidityIcon {
+  width: 40px;
+  height: auto;
+  padding-right: 10px;
+}
+.humidityContainer {
+  display: flex;
+}
+.iconWrapper {
+  margin: 0;
+}
+.label {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.data {
+  line-height: 85%;
+  height: 85%;
+}

@@ -1,0 +1,7 @@
+.graphsContainer {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1.3rem;
+}

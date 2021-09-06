@@ -1,0 +1,39 @@
+.humidityIcon {
+  width: 65px;
+  height: auto;
+  padding-right: 10px;
+}
+.humidityContainer {
+  display: flex;
+  margin-bottom: 5px;
+}
+.iconWrapper {
+  margin: 0;
+}
+.label {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-around;
+}
+.data {
+  line-height: 85%;
+  height: 85%;
+}
+
+@media only screen and (max-width: 550px) {
+  .humidityContainer {
+    flex-basis: 90%;
+    position: relative;
+    margin: 15px 0;
+  }
+  .humidityIcon {
+    width: 55px;
+    margin-left: 5px;
+  }
+}

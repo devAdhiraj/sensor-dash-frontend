@@ -1,0 +1,28 @@
+.tempIcon {
+  width: 75px;
+  height: auto;
+  margin: 0;
+}
+.tempContainer {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.iconWrapper {
+  margin: 0;
+}
+.label {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-around;
+}
+.data {
+  line-height: 85%;
+  height: 85%;
+}

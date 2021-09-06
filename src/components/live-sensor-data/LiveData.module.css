@@ -1,0 +1,51 @@
+h1 {
+  margin: 0;
+}
+
+.container {
+  width: 800px;
+  margin: 30px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px;
+}
+.loading {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.break {
+  flex-basis: 100%;
+}
+.time {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  font-size: 1rem;
+  font-style: italic;
+  /* width: 300px; */
+  margin-top: 15px;
+}
+
+.heading {
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    width: 600px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    width: fit-content;
+    font-size: 2rem;
+  }
+}
