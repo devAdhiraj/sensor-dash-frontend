@@ -1,12 +1,24 @@
 .tooltipContainer {
   display: flex;
-  background-color: rgba(150, 226, 179, 0.87);
   border-radius: 10px;
   font-size: 1.2rem;
   padding: 5px 20px;
   margin: 10px;
   flex-direction: column;
 }
-.temp {
+.text {
   font-size: 2.5rem;
+}
+
+.temp{
+  background-color: rgba(150, 226, 179, 0.87);
+}
+
+.humid {
+  background-color: rgba(81, 127, 252, 0.63)
+}
+
+.light {
+  background-color: rgba(27, 27, 27, 0.829);
+  color:white;
 }

@@ -1,10 +1,23 @@
 import classes from "./CustomTooltip.module.css";
-const CustomTooltip = ({ label, active, payload }) => {
+const CustomTooltip = ({ label, active, payload, dataLabel }) => {
+  const dynamicUnit = (dataLabel) => {
+    console.log(dataLabel)
+    if(dataLabel === "temp"){
+      return "°C"
+    }
+    else if(dataLabel === "humid"){
+      return "%"
+    }
+    else{
+      return null
+    }
+  }
   if (active && payload && payload.length) {
+
     return (
-      <div className={classes.tooltipContainer}>
-        <span className={classes.temp}>
-          {Number(payload[0].value).toFixed(1)}°C
+      <div className={`${classes.tooltipContainer} ${classes[dataLabel]}`}>
+        <span className={classes.text}>
+          {Number(payload[0].value).toFixed(1)}{dynamicUnit(dataLabel)}
         </span>
         <span>
           {new Date(label).toLocaleDateString("en-US", {

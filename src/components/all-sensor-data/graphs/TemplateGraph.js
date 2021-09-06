@@ -9,25 +9,26 @@ import {
 } from "recharts";
 import CustomTooltip from "./CustomTooltip";
 // import YLabel from "./YLabel";
-const TemplateGraph = ({ data }) => {
+const TemplateGraph = ({ data, graphkey, color, label }) => {
+  console.log(graphkey)
   return (
     <ResponsiveContainer width={800} height="80%">
       <LineChart
         data={data}
-        margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
         syncId="mygraphs"
       >
-        <Line type="monotone" strokeWidth={2} dataKey="temp" stroke="#12b05c" />
+        <Line type="monotone" strokeWidth={2} dataKey={graphkey} stroke={color} />
         <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
         <XAxis dataKey="createdAt" tick={false} />
         <YAxis
           label={{
-            value: "Temperature (°C)",
+            value: label,
             angle: -90,
             position: "insideLeft",
+            offset: 7
           }}
         />
-        <Tooltip content={<CustomTooltip />} />
+        <Tooltip content={<CustomTooltip dataLabel={graphkey} />} />
       </LineChart>
     </ResponsiveContainer>
   );

@@ -4,10 +4,10 @@ import AllData from "../components/all-sensor-data/AllData";
 
 const LiveFeed = () => {
   return (
-    <artice className={classes.main}>
+    <article className={classes.main}>
       <LiveData />
       <AllData />
-    </artice>
+    </article>
   );
 };
 export default LiveFeed;
