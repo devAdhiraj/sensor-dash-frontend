@@ -1,7 +1,6 @@
 import classes from "./CustomTooltip.module.css";
 const CustomTooltip = ({ label, active, payload, dataLabel }) => {
   const dynamicUnit = (dataLabel) => {
-    console.log(dataLabel)
     if(dataLabel === "temp"){
       return "°C"
     }

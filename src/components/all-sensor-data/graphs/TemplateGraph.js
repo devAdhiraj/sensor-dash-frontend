@@ -10,9 +10,8 @@ import {
 import CustomTooltip from "./CustomTooltip";
 // import YLabel from "./YLabel";
 const TemplateGraph = ({ data, graphkey, color, label }) => {
-  console.log(graphkey)
   return (
-    <ResponsiveContainer width={800} height="80%">
+    <ResponsiveContainer width={700} height="50%">
       <LineChart
         data={data}
         syncId="mygraphs"
@@ -25,7 +24,7 @@ const TemplateGraph = ({ data, graphkey, color, label }) => {
             value: label,
             angle: -90,
             position: "insideLeft",
-            offset: 7
+            offset: 5
           }}
         />
         <Tooltip content={<CustomTooltip dataLabel={graphkey} />} />

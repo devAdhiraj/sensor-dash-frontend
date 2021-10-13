@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import classes from "./LiveData.module.css";
-
+import {MdRefresh} from "react-icons/md";
 import Card from "../UI/Card";
 import LiveTemp from "./LiveTemp";
 import LiveHumidity from "./LiveHumidity";
@@ -10,7 +10,6 @@ import LiveLight from "./LiveLight";
 const LiveData = () => {
   const [currentData, setCurrentData] = useState({});
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     return fetchData();
   }, []);
@@ -40,9 +39,24 @@ const LiveData = () => {
       </div>
     );
   }
+  
   return (
     <section className={classes.container}>
-      <h1 className={classes.heading}>Live Feed</h1>
+      <div className={classes.titleContainer}>
+        <h1 className={classes.heading}>Live Feed</h1>
+        <button className={classes.refreshButton} onClick={() => {
+          setLoading(true);
+          setTimeout(()=> {
+            setLoading(false)
+          }, 200);
+
+          return fetchData()
+          
+          }}>
+        <MdRefresh className={classes.refresh}/>
+        </button>
+      </div>
+
       <Card className={classes.wrapper}>
         <LiveTemp temp={currentData.temp} />
         <LiveHumidity humidity={currentData.humidity} />

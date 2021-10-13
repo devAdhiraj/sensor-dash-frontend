@@ -1,3 +1,7 @@
 .main {
   min-height: 80vh;
+  display: flex;
+  /* align-items: right; */
+  flex-direction: column;
+  max-width: 95vw;
 }

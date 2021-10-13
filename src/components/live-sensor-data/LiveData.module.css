@@ -7,6 +7,35 @@ h1 {
   margin: 30px;
 }
 
+.refreshButton {
+  background-color:#64eef5;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  border:none;
+  padding:0;
+  display: flex;
+  align-items: flex-start;
+  padding: 2px;
+  margin: 7px 0 0 10px;
+}
+
+.refreshButton:hover{
+  background-color:#4bc9cfbe;
+  transition: all ease-in 0.3s;
+}
+
+.refresh{
+  font-size: 2rem;
+  line-height: 70%;
+}
+
+.titleContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
 .wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -39,13 +68,16 @@ h1 {
 
 @media only screen and (max-width: 900px) {
   .container {
-    width: 600px;
+    width: 90vw;
   }
 }
 
 @media only screen and (max-width: 700px) {
   .container {
-    width: fit-content;
+    /* width: 90vw; */
     font-size: 2rem;
+  }
+  .refreshButton{
+    margin-top: 2px;
   }
 }

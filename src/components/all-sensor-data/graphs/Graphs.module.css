@@ -1,7 +1,14 @@
 .graphsContainer {
   display: flex;
   flex-direction: column;
-  height: 1600px;
+  height: 1400px;
   width: auto;
   font-size: 1.3rem;
+  padding-left: 50px;
+}
+
+@media only screen and (max-width:815px){
+  .graphsContainer{
+    padding-left: 20px;
+  }
 }
