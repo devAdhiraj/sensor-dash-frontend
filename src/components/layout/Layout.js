@@ -1,3 +1,4 @@
+import React from "react"; 
 import MainNavigation from "./MainNavigation";
 import Footer from "./Footer";
 import "./Layout.module.css";

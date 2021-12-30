@@ -49,6 +49,7 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+
 .break {
   flex-basis: 100%;
 }

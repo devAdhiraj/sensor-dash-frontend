@@ -1,0 +1,10 @@
+.formWrapper {
+    font-size: 1.1rem;
+    margin: 30px;
+}
+
+.wrapper {
+    display: flex;
+    max-width: 300px;
+    flex-direction: column;
+}

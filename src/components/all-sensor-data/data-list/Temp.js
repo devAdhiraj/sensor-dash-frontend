@@ -1,3 +1,4 @@
+import React from "react"; 
 import classes from "./Temp.module.css";
 const Temp = ({ temp }) => {
   return (

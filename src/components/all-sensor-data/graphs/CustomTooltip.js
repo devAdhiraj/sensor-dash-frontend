@@ -1,3 +1,4 @@
+import React from "react"; 
 import classes from "./CustomTooltip.module.css";
 const CustomTooltip = ({ label, active, payload, dataLabel }) => {
   const dynamicUnit = (dataLabel) => {

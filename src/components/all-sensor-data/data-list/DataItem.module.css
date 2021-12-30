@@ -8,12 +8,14 @@ h1 {
 }
 
 .wrapper {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
   padding: 10px;
 }
+
 .loading {
   min-height: 70vh;
   background: #fff;
@@ -30,6 +32,26 @@ h1 {
   margin-bottom: 15px;
 }
 
+.cardWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.btnWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delBtn {
+  border-radius: 40%;
+  padding:1px 11px 1px 11px;
+  font-size:27px;
+  line-height: 95%;
+  margin-left: 10px;
+}
+
 @media only screen and (max-width: 900px) {
   .container {
     width: 600px;
@@ -43,11 +65,17 @@ h1 {
   }
   .time {
     width: 100%;
-    font-size: 0.9trm;
     display: flex;
     justify-content: center;
+    font-size: 0.9rem;
   }
   .time span {
     padding: 0px 5px;
+  }
+  .delBtn {
+    padding:1px 8px 1px 8px;
+    font-size:22px;
+    line-height: 95%;
+    margin-left: 5px;
   }
 }

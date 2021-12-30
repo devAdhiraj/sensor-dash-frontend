@@ -1,3 +1,5 @@
+import React from "react"; 
+import {useState, useEffect} from "react"; 
 import {
   LineChart,
   Line,
@@ -10,8 +12,18 @@ import {
 import CustomTooltip from "./CustomTooltip";
 // import YLabel from "./YLabel";
 const TemplateGraph = ({ data, graphkey, color, label }) => {
+  const [width, setWidth] = useState(window.outerWidth - 10 < 700 ? window.outerWidth - 10 : 700);
+    
+    useEffect(() => {
+      function handleResize() {
+        setWidth(window.outerWidth - 10 < 700 ? window.outerWidth - 10 : 700);
+      }
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    });
+
   return (
-    <ResponsiveContainer width={700} height="50%">
+    <ResponsiveContainer width={width} height="50%">
       <LineChart
         data={data}
         syncId="mygraphs"

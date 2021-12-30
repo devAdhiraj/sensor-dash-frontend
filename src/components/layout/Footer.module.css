@@ -5,10 +5,10 @@
   justify-content: space-around;
   color: #535353;
   background: #64eef5;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
   margin: 0;
-  padding: 12px 0 12px 0;
+  padding: 12px 0 12px 5px;
 }
 
 .listContainer {
@@ -49,5 +49,8 @@
 @media only screen and (max-width: 600px) {
   .navitem {
     padding: 0 20px;
+  }
+  .footer {
+    font-size:0.9rem;
   }
 }

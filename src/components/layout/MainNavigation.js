@@ -1,6 +1,6 @@
+import React from "react"; 
 import classes from "./MainNavigation.module.css";
 import { Link } from "react-router-dom";
-import "../../../public/logo.svg";
 
 const MainNavigation = () => {
   return (

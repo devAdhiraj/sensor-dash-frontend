@@ -1,3 +1,4 @@
+import React from "react"; 
 import classes from "./LiveHumidity.module.css";
 
 const LiveHumidity = ({ humidity }) => {

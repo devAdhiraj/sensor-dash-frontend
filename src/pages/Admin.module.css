@@ -1,0 +1,35 @@
+.main {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 95vw;
+}
+
+.loading {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoutBtn {
+    position: fixed;
+    top: calc(98vh - 50px);
+    left: calc(98vw - 85px);
+    margin: 10px;
+}
+
+@media only screen and (max-width: 325px) {
+    .logoutBtn {
+        left: 75vw;
+        top: 96vh;
+    }
+}
+
+@media only screen and (max-width: 290px) {
+    .logoutBtn {
+        left:69vw;
+        top: 100vh;
+    }
+}

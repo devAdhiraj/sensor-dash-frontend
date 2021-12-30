@@ -1,3 +1,4 @@
+import React from "react"; 
 import classes from "./Humidity.module.css";
 const Humidity = ({ humidity }) => {
   return (

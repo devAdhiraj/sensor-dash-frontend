@@ -1,0 +1,17 @@
+.formWrapper {
+    font-size: 1.1rem;
+}
+
+.cardWrapper {
+    margin: 30px 15px 30px 15px;
+    padding:20px;
+}
+.wrapper {
+    display: flex;
+    max-width: 400px;
+    flex-direction: column;
+}
+.feedback {
+    color:#dc3545;
+    font-size:0.9rem;
+}

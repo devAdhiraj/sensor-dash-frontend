@@ -1,3 +1,4 @@
+import React from "react"; 
 import classes from "./LiveTemp.module.css";
 
 const LiveTemp = ({ temp }) => {

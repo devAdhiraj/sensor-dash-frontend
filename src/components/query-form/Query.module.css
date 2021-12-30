@@ -1,0 +1,42 @@
+.formWrapper {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 750px;
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+
+.datesWrapper {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.numberWrapper {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.submitWrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sortWrapper{
+    display: flex;
+    align-items: flex-end;
+}
+
+@media only screen and (max-width: 800px) {
+    .formWrapper {
+        width: 90vw;
+        flex-direction:column;
+    }
+}

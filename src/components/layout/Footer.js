@@ -1,3 +1,4 @@
+import React from "react"; 
 import classes from "./Footer.module.css";
 import {
   AiFillGithub,
@@ -13,7 +14,7 @@ const Footer = () => {
         <li className={classes.navitem}>
           <a
             className={classes.navlink}
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             href="https://www.linkedin.com/in/adhiraj-singh-954b19206/"
           >
@@ -23,7 +24,7 @@ const Footer = () => {
         <li className={classes.navitem}>
           <a
             className={classes.navlink}
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             href="https://www.github.com/devAdhiraj/"
           >
@@ -33,7 +34,7 @@ const Footer = () => {
         <li className={classes.navitem}>
           <a
             className={classes.navlink}
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
             href="mailto:adhiraj.bal@gmail.com"
           >

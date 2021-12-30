@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import React from "react"; 
+import { useState, useEffect, useContext } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import classes from "./LiveData.module.css";
 import {MdRefresh} from "react-icons/md";
@@ -6,27 +7,23 @@ import Card from "../UI/Card";
 import LiveTemp from "./LiveTemp";
 import LiveHumidity from "./LiveHumidity";
 import LiveLight from "./LiveLight";
+import DataContext from "../store/DataContext";
 
 const LiveData = () => {
-  const [currentData, setCurrentData] = useState({});
-  const [loading, setLoading] = useState(true);
+  const context = useContext(DataContext);
+  const [loading, setLoading] = useState(context.live_data === null ? true : false);
+  
   useEffect(() => {
-    return fetchData();
+    if(!context.live_data){ 
+      return fetchData()
+    }
+    return;
   }, []);
 
   const fetchData = async () => {
     try {
-      const resp = await fetch(
-        "https://ad-sensor-dash.herokuapp.com/api/sensors/last"
-      );
-      const { temp, humid, light, createdAt } = await resp.json();
-      await setCurrentData({
-        temp: temp,
-        humidity: humid,
-        light: light,
-        time: createdAt,
-      });
-      await setLoading(false);
+        await context.update_live_data()
+        await setLoading(false);
     } catch (err) {
       console.log(err);
     }
@@ -58,14 +55,14 @@ const LiveData = () => {
       </div>
 
       <Card className={classes.wrapper}>
-        <LiveTemp temp={currentData.temp} />
-        <LiveHumidity humidity={currentData.humidity} />
-        <LiveLight light={currentData.light} />
+        <LiveTemp temp={context.live_data.temp} />
+        <LiveHumidity humidity={context.live_data.humidity} />
+        <LiveLight light={context.live_data.light} />
         <span className={classes.break}></span>
         <div className={classes.time}>
           <span>
             Last Updated:{" "}
-            {new Date(currentData.time).toLocaleDateString("en-US", {
+            {new Date(context.live_data.time).toLocaleDateString("en-US", {
               weekday: "long",
               year: "numeric",
               month: "long",
