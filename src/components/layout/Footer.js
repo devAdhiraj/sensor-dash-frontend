@@ -43,7 +43,8 @@ const Footer = () => {
         </li>
       </ul>
       <span className={classes.navitem}>
-        <a className={classes.navlink} href="/">
+        <a className={classes.navlink} rel="noopener noreferrer"
+            target="_blank" href="https://github.com/devAdhiraj/sensor-dash-frontend">
           Source Code
         </a>
       </span>
