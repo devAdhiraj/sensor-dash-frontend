@@ -1,6 +1,6 @@
 # AD Sensor Dashboard Frontend
 This is the frontend react web app for the sensor dashboard.\
-The web app is hosted at [https://ad-sensor-dash.herokuapp.com](https://ad-sensor-dash.herokuapp.com).\
+The web app is hosted at [https://ad-sensor-dash.herokuapp.com](https://ad-sensor-dash.herokuapp.com).
 Git Repository for backend: [https://github.com/devAdhiraj/sensor-dash-backend](https://github.com/devAdhiraj/sensor-dash-backend)\
 Git repository for device code: [https://github.com/devAdhiraj/Sensor-dash-device-code](https://github.com/devAdhiraj/Sensor-dash-device-code)\
 
